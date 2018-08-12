@@ -1,0 +1,7 @@
+{
+  "name": "Immobil",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
