@@ -1,0 +1,23 @@
+<!--
+  Generated template for the ComptePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header color="primary">
+
+  <ion-navbar>
+    <ion-title>Mon compte</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let m of menus" (click)="onPage(m.component)">
+      <ion-icon name="{{m.icon}}" item-start></ion-icon>
+      {{m.title}}
+    </ion-item>
+  </ion-list>
+</ion-content>

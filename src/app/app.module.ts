@@ -6,20 +6,42 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import {HttpClientModule} from "@angular/common/http";
+import {DetailPage} from "../pages/detail/detail";
+import {ParametrePage} from "../pages/parametre/parametre";
+import {IonicStorageModule} from "@ionic/storage";
+import {ComptePage} from "../pages/compte/compte";
+import {CompteHistoricComPage} from "../pages/compte-historic-com/compte-historic-com";
+import {CompteAbonnePage} from "../pages/compte-abonne/compte-abonne";
+import {ComptePaiementPage} from "../pages/compte-paiement/compte-paiement";
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    DetailPage,
+    ComptePage,
+    ComptePaiementPage,
+    CompteAbonnePage,
+    CompteHistoricComPage,
+    ParametrePage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    HttpClientModule,
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    DetailPage,
+    ComptePage,
+    ComptePaiementPage,
+    CompteAbonnePage,
+    CompteHistoricComPage,
+    ParametrePage
   ],
   providers: [
     StatusBar,

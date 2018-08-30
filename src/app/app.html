@@ -1,1 +1,23 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content" >
+  <ion-header class="bar-profile">
+
+    <div class="profile">
+      <img class="profile-picture" src="../assets/imgs/reap.jpg" />
+      <h3 class="name">Immob</h3>
+    </div>
+
+  </ion-header>
+
+  <ion-content class="my-container">
+    <ion-list no-lines="" >
+      <button menuClose ion-item *ngFor="let m of menus" (click)="onPage(m)" class="items">
+        <ion-icon name="{{m.icon}}" item-left></ion-icon>
+        {{m.title}}
+      </button>
+      <button menuClose ion-item class="items">Aide et commentaires</button>
+      <button menuClose ion-item class="items">A propos de Immob</button>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav #content [root]="rootPage"></ion-nav>
