@@ -4,10 +4,13 @@ import { CompteHistoricComPage } from './compte-historic-com';
 
 @NgModule({
   declarations: [
-    CompteHistoricComPage,
+    CompteHistoricComPage
   ],
   imports: [
-    IonicPageModule.forChild(CompteHistoricComPage),
+    IonicPageModule.forChild(CompteHistoricComPage)
   ],
+  exports:[
+    CompteHistoricComPage
+  ]
 })
 export class CompteHistoricComPageModule {}

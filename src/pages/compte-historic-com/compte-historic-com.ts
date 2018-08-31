@@ -7,8 +7,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-
-@IonicPage()
+@IonicPage({
+  defaultHistory:['HomePage']
+})
 @Component({
   selector: 'page-compte-historic-com',
   templateUrl: 'compte-historic-com.html',

@@ -9,5 +9,8 @@ import { InscriptionPage } from './inscription';
   imports: [
     IonicPageModule.forChild(InscriptionPage),
   ],
+  exports:[
+    InscriptionPage
+  ]
 })
 export class InscriptionPageModule {}

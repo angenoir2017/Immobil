@@ -12,16 +12,18 @@ import {ComptePaiementPage} from "../compte-paiement/compte-paiement";
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+@IonicPage({
+  defaultHistory:['HomePage']
+})
 @Component({
   selector: 'page-compte',
   templateUrl: 'compte.html',
 })
 export class ComptePage {
   menus =[
-    {title:'Modes de paiement', icon: 'card', component: ComptePaiementPage},
-    {title:'Epingles', icon: 'bookmark', component: CompteAbonnePage},
-    {title:'Historique des commandes', icon: 'list', component: CompteHistoricComPage}
+    {title:'Modes de paiement', icon: 'card', component: 'ComptePaiementPage'},
+    {title:'Epingles', icon: 'bookmark', component: 'CompteAbonnePage'},
+    {title:'Historique des commandes', icon: 'list', component: 'CompteHistoricComPage'}
   ];
   constructor(public navCtrl: NavController, public navParams: NavParams) { }
 

@@ -4,10 +4,13 @@ import { AnnoncerPage } from './annoncer';
 
 @NgModule({
   declarations: [
-    AnnoncerPage,
+    AnnoncerPage
   ],
   imports: [
-    IonicPageModule.forChild(AnnoncerPage),
+    IonicPageModule.forChild(AnnoncerPage)
   ],
+  exports:[
+    AnnoncerPage
+  ]
 })
 export class AnnoncerPageModule {}

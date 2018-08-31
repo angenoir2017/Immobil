@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, IonicPage } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
 import { Storage } from '@ionic/storage';
 
-import {DetailPage} from '../detail/detail';
 
+@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -64,7 +64,7 @@ export class HomePage {
   //Si l'utilisateur click il es dirige vers la page detail
   //avec envoie de l'item clicke
   voirDetail(item){
-      this.navCtrl.push(DetailPage, item);
+      this.navCtrl.push('DetailPage', item);
 
   }
   //Pour le scroll infini
