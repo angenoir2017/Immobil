@@ -22,7 +22,7 @@ export class HomePage {
               public http: HttpClient) {
      this.url = 'https://jsonplaceholder.typicode.com/photos';
 
-     this.loadData();
+    // this.loadData();
   }
 //Partie de manipulation de donnee
   //Ici nous obtenons les objets a afficher via l'api

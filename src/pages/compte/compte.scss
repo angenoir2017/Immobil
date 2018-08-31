@@ -1,3 +1,32 @@
 page-compte {
-
+  .profile {
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    padding-top: 15px;
+  }
+  .name {
+    color: #e6ad22;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+  .profile-picture {   border-radius: 50%;
+  }
+  .menu
+  {
+    top: 169px;
+  }
+  .bar-profile {
+    background-color:white;
+    height: 170px;
+  }
+  .items{
+   text-align: right;
+  }
 }
