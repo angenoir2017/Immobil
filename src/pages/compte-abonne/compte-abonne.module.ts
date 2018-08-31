@@ -4,10 +4,13 @@ import { CompteAbonnePage } from './compte-abonne';
 
 @NgModule({
   declarations: [
-    CompteAbonnePage,
+    CompteAbonnePage
   ],
   imports: [
-    IonicPageModule.forChild(CompteAbonnePage),
+    IonicPageModule.forChild(CompteAbonnePage)
   ],
+  exports:[
+    CompteAbonnePage
+  ]
 })
 export class CompteAbonnePageModule {}

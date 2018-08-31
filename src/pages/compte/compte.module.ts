@@ -4,10 +4,13 @@ import { ComptePage } from './compte';
 
 @NgModule({
   declarations: [
-    ComptePage,
+    ComptePage
   ],
   imports: [
-    IonicPageModule.forChild(ComptePage),
+    IonicPageModule.forChild(ComptePage)
   ],
+  exports:[
+    ComptePage
+]
 })
 export class ComptePageModule {}

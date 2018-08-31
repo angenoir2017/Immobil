@@ -4,10 +4,13 @@ import { ComptePaiementPage } from './compte-paiement';
 
 @NgModule({
   declarations: [
-    ComptePaiementPage,
+    ComptePaiementPage
   ],
   imports: [
-    IonicPageModule.forChild(ComptePaiementPage),
+    IonicPageModule.forChild(ComptePaiementPage)
   ],
+  exports:[
+    ComptePaiementPage
+  ]
 })
 export class ComptePaiementPageModule {}
