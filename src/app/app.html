@@ -8,13 +8,13 @@
 
   </ion-header>
   <ion-content class="my-container">
-    <ion-list no-lines="" >
+    <ion-list  >
       <button menuClose ion-item *ngFor="let m of menus" (click)="onPage(m)" class="items">
         <ion-icon name="{{m.icon}}" item-left></ion-icon>
         {{m.title}}
       </button>
-      <button menuClose ion-item class="items">Aide et commentaires</button>
-      <button menuClose ion-item class="items">A propos de Immob</button>
+      <button menuClose ion-item class="items"><ion-icon name="help" item-left></ion-icon>Aide et commentaires </button>
+      <button menuClose ion-item class="items"><ion-icon name="md-information-circle" item-left></ion-icon>A propos de Immob</button>
     </ion-list>
   </ion-content>
 </ion-menu>

@@ -13,7 +13,7 @@ export class MyApp {
   rootPage:any = 'HomePage';
   menus =[
     {title:'Acceuil', icon: 'home', component: 'HomePage'},
-    {title:'Compte', icon: 'settings', component: 'ComptePage'},
+    {title:'Compte', icon: 'person', component: 'ComptePage'},
     {title:'Parametre', icon: 'settings', component: 'ParametrePage'}
   ];
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
