@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>compteHistoricCom</ion-title>
   </ion-navbar>
 
@@ -14,5 +14,14 @@
 
 
 <ion-content padding>
+  <ion-searchbar
+    [(ngModel)]="myInput"
+    [showCancelButton]="shouldShowCancel"
+    (ionInput)="onInput($event)"
+    (ionCancel)="onCancel($event)">
+  </ion-searchbar>
+
+
+
 
 </ion-content>
