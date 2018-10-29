@@ -10,9 +10,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 export class MyApp {
   rootPage:any = 'HomePage';
   menus =[
+    {title:'Soumèttre Immobilier', icon: 'add', component:'MesimmobPage'},
     {title:'Acceuil', icon: 'home', component: 'HomePage'},
     {title:'Compte', icon: 'person', component: 'ComptePage'},
-    {title:'Parametre', icon: 'settings', component: 'ParametrePage'}
+    {title:'Parametre', icon: 'settings', component: 'ParametrePage'},
+    {title: 'Aide et commentaires',icon:'help', component:'AidePage'}
   ];
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

@@ -7,11 +7,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import {HttpClientModule} from "@angular/common/http";
 import {IonicStorageModule} from "@ionic/storage";
-
+import { ArticlesProvider } from '../providers/articles/articles';
+import { Stripe } from '@ionic-native/stripe';
 
 @NgModule({
   declarations: [
-    MyApp,
+    MyApp
+
 
   ],
   imports: [
@@ -28,7 +30,9 @@ import {IonicStorageModule} from "@ionic/storage";
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    Stripe,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ArticlesProvider
   ]
 })
 export class AppModule {}

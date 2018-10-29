@@ -22,6 +22,8 @@ export class DetailPage {
     console.log('ionViewDidLoad DetailPage');
   }
 
-
+  louer(){
+    this.navCtrl.push('PayementPage');
+  }
 
 }
