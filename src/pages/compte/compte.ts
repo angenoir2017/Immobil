@@ -19,8 +19,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ComptePage {
   menus =[
     {title:'Modes de paiement', icon: 'card', component: 'ComptePaiementPage'},
-    {title:'Epingles', icon: 'bookmark', component: 'CompteAbonnePage'},
-    {title:'Historique des Paiements', icon: 'list', component: 'CompteHistoricComPage'}
+    {title:'Articles epingles', icon: 'bookmark', component: 'CompteEpinglePage'},
+    {title:'Historique des operations', icon: 'list', component: 'CompteHistoricComPage'}
   ];
   constructor(public navCtrl: NavController, public navParams: NavParams) { }
 

@@ -4,10 +4,10 @@ import { PayementPage } from './payement';
 
 @NgModule({
   declarations: [
-    PayementPage,
+    PayementPage
   ],
   imports: [
-    IonicPageModule.forChild(PayementPage),
+    IonicPageModule.forChild(PayementPage)
   ],
   exports:[
     PayementPage

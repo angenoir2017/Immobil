@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar color="primary">
+  <ion-toolbar color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -17,33 +17,88 @@
               (click)="isSearchbarOpened=true">
         <ion-icon name="search"></ion-icon>
       </button>
+      <button ion-button icon-only
+      (click)="showData()">
+        <ion-icon name="help"></ion-icon>
+      </button>
     </ion-buttons>
-  </ion-navbar>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content class="my-container" padding>
+  <ion-segment [(ngModel)]="operation" color="primary">
+    <ion-segment-button value="louer">
+      A louer
+    </ion-segment-button>
+    <ion-segment-button value="acheter">
+      A vendre
+    </ion-segment-button>
+  </ion-segment>
 
-  <ion-card *ngFor="let item of items" >
-    <div (click)="voirDetail(item.id)">
-    <img [src]="item.thumbnailUrl"/>
+  <div [ngSwitch]="operation" >
+    <ion-row *ngSwitchCase="'acheter'" >
+
+        <ion-col *ngFor="let objaVendre of objaVendres">
+
+           <ion-segment [(ngModel)]="affArticle" (ionChange)="aVendresegment($event)"  >
+            <ion-segment-button value=" {{objaVendre}}">
+              {{objaVendre}}
+            </ion-segment-button>
+          </ion-segment>
+
+
+     </ion-col>
+
+    </ion-row>
+
+    <ion-row *ngSwitchCase="'louer'">
+
+      <ion-col *ngFor="let objaLouer of objaLouers">
+        <ion-segment [(ngModel)]="affArticle" (ionChange)="aLouersegment($event)">
+          <ion-segment-button value="{{objaLouer}}">
+            {{objaLouer}}
+          </ion-segment-button>
+        </ion-segment>
+      </ion-col>
+    </ion-row>
+</div>
+  <ion-card *ngFor="let article of articles" >
+    <ion-card-header (click)="voirDetail()">
+      <img [src]="article.urlPhoto"/>
+
+    </ion-card-header>
+
+
     <ion-card-content>
+      <button ion-button icon-only class="lellike">
+        <ion-icon name="heart"></ion-icon></button>
+      <button ion-button icon-only class="lellike">
+        <ion-icon name="share"></ion-icon></button>
       <ion-card-title>
-        {{item.title}}
+        {{article.name}}
+        <ion-item>
+        Prix: {{article.price}}
+      </ion-item>
+        <ion-item>
+          Proprietaire: {{article.proprio}}
+        </ion-item>
       </ion-card-title>
+      {{article.type}}
       <p>
         <ion-icon name="heart" item-start></ion-icon>
-        likes: {{item.id}}
+       31
      /
         <ion-icon name="eye" item-start></ion-icon>
-        vues: {{item.id}}
+        43
       </p>
+
     </ion-card-content>
-      </div>
   </ion-card>
-  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+
+  <!-- ion-infinite-scroll (ionInfinite)="doInfinite($event)">
     <ion-infinite-scroll-content
     loadingSpinner="bubbles"
     loadingText="Chargement en cour ==> Immob"
     ></ion-infinite-scroll-content>
-  </ion-infinite-scroll>
+  </ion-infinite-scroll-->
 </ion-content>

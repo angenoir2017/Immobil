@@ -1,3 +1,15 @@
 page-compte-historic-com {
-
+  .cardheader{
+    background-color: #f4f4f4;
+    color: #000000;
+  }
+  .my-container {
+    background-image:  url("../assets/imgs/wall.jpg");
+    background-repeat: repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+  }
 }

@@ -16,12 +16,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'compte-paiement.html',
 })
 export class ComptePaiementPage {
-
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ComptePaiementPage');
   }
+
 
 }

@@ -6,13 +6,36 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>comptePaiement</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>Modes de paiement</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
 
+    <p padding>Ajouter un mode de paiement pour effectuer vos prochains achats rapidement et en toute simplicite</p>
+
+  <ion-card>
+    <ion-card-header class="cardheader">
+      Ajouter une carte de paiement
+    </ion-card-header>
+
+    <ion-list>
+      <button ion-item>
+        <ion-icon name="card" item-start></ion-icon>
+        Ajouter une carte de paiement
+      </button>
+    </ion-list>
+  </ion-card>
+  <ion-card>
+    <ion-card-header class="cardheader">
+      Autres options
+    </ion-card-header>
+    <button ion-item>
+      <ion-icon name="settings" item-start></ion-icon>
+      Autres parametres de paiement
+    </button>
+  </ion-card>
 </ion-content>

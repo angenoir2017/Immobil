@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, IonicPage } from 'ionic-angular';
-import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
-import { Storage } from '@ionic/storage';
+import {ArticlesProvider} from "../../providers/articles/articles";
 
 
 @IonicPage()
@@ -11,63 +10,101 @@ import { Storage } from '@ionic/storage';
   templateUrl: 'home.html'
 })
 export class HomePage {
+
    items:any = [];
-   key:string ='items';
-   url: string;
-   data: Observable<any>;
+   operation:any;
    isSearchbarOpened = false;
+   //
+  public objaVendres :any=['Maison','Appartement','Terrain'];
 
-  constructor(public navCtrl: NavController,
-              public storage:Storage,
-              public http: HttpClient) {
-     this.url = 'https://jsonplaceholder.typicode.com/photos';
+  public objaLouers :any=['Maison','Appartement','Magazin'];
 
-    this.loadData();
+  public articles: any =[];
+  public aLouer: any =[];
+  public aVendre: any =[];
+  segmentSelected : any;
+
+
+    constructor(public navCtrl: NavController,
+              public http: HttpClient,
+                private articleProvider:ArticlesProvider
+              ) {
+
+    }
+  showData(){
+    this.navCtrl.push('AddArticlePage');
   }
+
+
+    aVendresegment(select){
+
+      if(select=="Appartement"){
+        this.softArticle(select._value);
+
+      }if(select=="Maison"){
+        this.softArticle(select._value);
+
+      }else {
+
+        this.softArticle(select._value);
+      }
+}
+  aLouersegment(select){
+
+    if(select=="Appartement"){
+
+      this.softArticle(select._value);
+    }if(select=="Maison"){
+      this.softArticle(select._value);
+
+    }else {
+
+      this.softArticle(select._value);
+    }
+  }
+
+
+    softArticle(select){
+      if(select=="acheter"){
+        this.getAvendre();
+        this.articles = this.aVendre;
+      } else {
+        this.getAlouer();
+        this.articles = this.aLouer;
+      }
+    }
 //Partie de manipulation de donnee
   //Ici nous obtenons les objets a afficher via l'api
-  getData(){
-    this.data = this.http.get(this.url);
-      this.data.subscribe(resultat =>{
-          this.items = resultat;
-        this.saveData();
-              });
+getAlouer(){
+    this.articleProvider.getAlouer().subscribe(data=>{
+      this.aLouer = data;
+    },err =>{
+      console.log('echec lors du chargement du servive',err);
+    });
+  }
+  getAvendre(){
+    this.articleProvider.getAvendre().subscribe(data=>{
+      this.aVendre = data;
+    },err =>{
+      console.log('echec lors du chargement du servive',err);
+    });
   }
 
-  //Sauvegarde de donnee dans la base de donnee.
-  saveData(){
-    this.storage.set(this.key, JSON.stringify(this.items));
-  }
-
-
-  //Lecture des donnees dans la base de donnee
-  loadData(){
-    this.storage.get(this.key).then((val) =>{
-      if(val!=null && val !=undefined){
-        this.items =JSON.parse(val);
-      }else{
-        try {
-          this.getData();
-        } catch (e){
-          console.log("la connexion est inactive");
-          console.log(e);
-        }
-      }
-     }
-     );
-  }
-  //Pour la recherche depuis la bar de recherche
-  //Les parametres serons vu apres
-  onSearch(event){
-    console.log(event.target.value);
-  }
   //Si l'utilisateur click il es dirige vers la page detail
   //avec envoie de l'item clicke
-  voirDetail(item){
-      this.navCtrl.push('DetailPage', item);
+  voirDetail(){
+
+    this.navCtrl.push('DetailPage');
 
   }
-  //Pour le scroll infini
+
+
+  //Pour la recherche depuis la bar de recherche
+  //Les parametres serons vu apres
+  /*onSearch(event){
+    console.log(event.target.value);
+  }
+   //Pour le scroll infini
   doInfinite(infiniteScroll) {
     //On recupere les infos sur ce url
     this.data = this.http.get(this.url);
@@ -87,5 +124,6 @@ export class HomePage {
       refresher.complete();
     });
   }
+  */
 
 }
