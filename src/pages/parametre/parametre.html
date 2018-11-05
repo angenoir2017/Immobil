@@ -10,12 +10,96 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>parametre</ion-title>
+    <ion-title>parametres</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding style="background-color: #dfdfdf">
+
+
+  <H3>Mon compte</H3>
+
+    <ion-card-content>
+    <button  ion-item  class="items" large outline>
+      Compte
+    </button>
+    </ion-card-content>
+
+
+  <H3>Préférence</H3>
+
+
+       <p> Activer ou désactiver les offres que vous voulez . </p>
+          <h5>A vendre</h5>
+
+  <ion-list>
+    <ion-card>
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col  col-lg-9> <ion-label>Terrain à vendre</ion-label></ion-col>
+            <ion-col   col-lg-3 style="align-content: right"><ion-item item-end><ion-toggle ></ion-toggle></ion-item> </ion-col>
+
+          </ion-row>
+          <ion-row>
+            <ion-col   col-lg-9> <ion-label>Maison à vendre </ion-label></ion-col>
+            <ion-col col-lg-3 style="align-content: right"><ion-item item-end><ion-toggle ></ion-toggle></ion-item> </ion-col>
+
+          </ion-row>
+          <ion-row>
+            <ion-col   col-lg-9> <ion-label>Appartement à vendre </ion-label></ion-col>
+            <ion-col  col-lg-3 style="align-content: right"><ion-item item-end><ion-toggle ></ion-toggle></ion-item>  </ion-col>
+
+          </ion-row>
+        </ion-grid>
+
+
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+<h5> A louer</h5>
+  <ion-list>
+    <ion-card>
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col  col-lg-9> <ion-label>Magasin à louer </ion-label></ion-col>
+            <ion-col   col-lg-3 style="align-content: right"><ion-item item-end><ion-toggle ></ion-toggle></ion-item> </ion-col>
+
+          </ion-row>
+          <ion-row>
+            <ion-col   col-lg-9> <ion-label>Maison à louer </ion-label></ion-col>
+            <ion-col col-lg-3 style="align-content: right"><ion-item item-end><ion-toggle ></ion-toggle></ion-item> </ion-col>
+
+          </ion-row>
+          <ion-row>
+            <ion-col   col-lg-9> <ion-label>Appartement à louer </ion-label></ion-col>
+            <ion-col  col-lg-3 style="align-content: right"><ion-item item-end><ion-toggle ></ion-toggle></ion-item>  </ion-col>
+
+          </ion-row>
+        </ion-grid>
+
+
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+  <H3>Sécurité</H3>
+  <p> Modifier vos paramètre de sécurité </p>
+  <ion-card-content>
+    <button  ion-item  class="items" large outline>
+      Confidentialité
+    </button>
+    <button  ion-item  class="items" large outline>
+      Sauvegarde
+    </button>
+    <button  ion-item  class="items" large outline>
+      A propos de l'aplication
+    </button>
+  </ion-card-content>
+
 
 </ion-content>
