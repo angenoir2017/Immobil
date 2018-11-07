@@ -13,6 +13,7 @@ export class MyApp {
     {title:'Soumèttre Immobilier', icon: 'add', component:'MesimmobPage'},
     {title:'Acceuil', icon: 'home', component: 'HomePage'},
     {title:'Compte', icon: 'person', component: 'ComptePage'},
+    {title:'Partager', icon: 'share', component: 'ComptePage'},
     {title:'Parametre', icon: 'settings', component: 'ParametrePage'},
     {title: 'Aide et commentaires',icon:'help', component:'AidePage'}
   ];

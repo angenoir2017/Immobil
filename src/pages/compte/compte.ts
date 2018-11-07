@@ -18,9 +18,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ComptePage {
   menus =[
+    {title:'Modifier photo de profil', icon: 'md-camera',},
+    {title:'Modifier vos information', icon: 'md-hammer',},
     {title:'Modes de paiement', icon: 'card', component: 'ComptePaiementPage'},
     {title:'Articles epingles', icon: 'bookmark', component: 'CompteEpinglePage'},
-    {title:'Historique des operations', icon: 'list', component: 'CompteHistoricComPage'}
+    {title:'Historique des operations', icon: 'list', component: 'CompteHistoricComPage'},
+    {title:'Aide', icon: 'help',},
   ];
   constructor(public navCtrl: NavController, public navParams: NavParams) { }
 
