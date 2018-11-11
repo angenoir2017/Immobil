@@ -8,14 +8,24 @@
 
   </ion-header>
   <ion-content class="my-container">
-    <ion-list  >
-      <button menuClose ion-item *ngFor="let m of menus" (click)="onPage(m)" class="items">
-        <ion-icon name="{{m.icon}}" item-left></ion-icon>
-        {{m.title}}
-      </button>
+
+    <ion-grid>
+      <ion-row>
 
 
-    </ion-list>
+          <button menuClose ion-item *ngFor="let m of menus" (click)="onPage(m)" class="items">
+            <ion-col col-4>
+            <ion-card>
+          <ion-icon name="{{m.icon}}" item-left></ion-icon>
+          {{m.title}}
+            </ion-card>
+            </ion-col>
+          </button>
+
+
+
+      </ion-row>
+    </ion-grid>
   </ion-content>
 </ion-menu>
 <ion-nav #content [root]="rootPage"></ion-nav>

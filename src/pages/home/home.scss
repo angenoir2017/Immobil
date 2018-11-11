@@ -11,5 +11,58 @@ page-home {
   .lellike{
     color: #419fd9;
     background-color: #fff;
+
   }
+  ion-header{
+
+
+  }
+  ion-title{
+
+  }
+
+  ion-segment-button{
+    //max-width: 25px;
+  }
+  .mybuton{
+    .segment-button {
+      border-style: none;
+      border-color:#302e3b ;
+      color: white;
+      border-width: thin;
+      background-color: #302e3b;
+    }
+
+    .segment-button:first-of-type {
+      border-radius: 90px 90px 90px 90px;
+      margin-right: 0px;
+      margin-left: 0px;
+      line-height: 3.4rem;
+      height: 100%;
+      width: 100%}
+    .segment-button:not(:first-of-type) {
+      border-radius: 90px 90px 90px 90px;
+      margin-right: 0px;
+      margin-left: 20px;
+      line-height: 3.4rem;
+      height: 100%;
+      width: 100%;}
+    .segment-button:last-of-type {
+      border-radius: 90px 90px 90px 90px;
+      margin-right: 0px;
+      margin-left: 20px;
+      line-height: 3.4rem;
+      height: 100%;
+      width: 100%;}
+
+
+    .segment-activated{
+      background-color:#302e3b;
+      color:white;
+    }
+
+  }
+
+
+
 }

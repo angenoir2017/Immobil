@@ -1,4 +1,5 @@
 page-compte {
+
   .profile {
     top: 0;
     right: 0;
@@ -37,5 +38,9 @@ page-compte {
   .items{
    text-align: right;
   }
-
+  .mon-container
+  {
+    background-image:  url("../assets/imgs/wallg.jpg");
+    background-repeat: repeat;
+  }
 }
