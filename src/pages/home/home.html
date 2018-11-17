@@ -1,5 +1,5 @@
-<ion-header>
-  <ion-toolbar color="primary">
+<ion-header no-border>
+  <ion-navbar transparent>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -19,22 +19,22 @@
       </button>
       <button ion-button icon-only
       (click)="showData()">
-        <ion-icon name="help"></ion-icon>
+
       </button>
     </ion-buttons>
-  </ion-toolbar>
+  </ion-navbar>
 </ion-header>
 
 <ion-content class="my-container" padding>
   <ion-segment [(ngModel)]="operation" color="primary">
-    <ion-segment-button value="louer">
+    <ion-segment-button value="louer" style="background-color: #302e3b; color: white">
       A louer
     </ion-segment-button>
-    <ion-segment-button value="acheter">
+    <ion-segment-button value="acheter" style="background-color: #302e3b; color: white">
       A vendre
     </ion-segment-button>
   </ion-segment>
-
+<div class="mybuton">
   <div [ngSwitch]="operation" >
     <ion-row *ngSwitchCase="'acheter'" >
 
@@ -55,12 +55,13 @@
 
       <ion-col *ngFor="let objaLouer of objaLouers">
         <ion-segment [(ngModel)]="affArticle" (ionChange)="aLouersegment($event)">
-          <ion-segment-button value="{{objaLouer}}">
+          <ion-segment-button value="{{objaLouer}}" class="mybuton">
             {{objaLouer}}
           </ion-segment-button>
         </ion-segment>
       </ion-col>
     </ion-row>
+</div>
 </div>
   <ion-card *ngFor="let article of articles" >
     <ion-card-header (click)="voirDetail()">
