@@ -9,6 +9,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {IonicStorageModule} from "@ionic/storage";
 import { ArticlesProvider } from '../providers/articles/articles';
 import { Stripe } from '@ionic-native/stripe';
+import { IonicImageViewerModule } from 'ionic-img-viewer';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { Stripe } from '@ionic-native/stripe';
     BrowserModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp),
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    IonicImageViewerModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

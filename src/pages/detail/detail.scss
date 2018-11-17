@@ -1,4 +1,27 @@
 page-detail {
+  .maclasse{background-color: #1e2b39;}
+  .ioncard{ background-color: #9c37d1;}
+  ion-slide.swiper-slide {
+    left: 25%;
+  }
+
+  .slide-zoom {
+    background: #e6e6e6;
+  }
+
+  .thumb-img {
+    padding: 10px;
+  }
+  .my-container {
+    background-image:  url("../assets/imgs/wallg.jpg");
+    //background-color:#6c5373 ;
+    background-repeat: repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+  }
 
 
 }

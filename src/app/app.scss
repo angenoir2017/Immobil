@@ -1,5 +1,6 @@
 .my-container {
-  background-image:  url("../assets/imgs/wallg.jpg");
+  //background-image:  url("../assets/imgs/wallg.jpg");
+  background-color:#6c5373 ;
   background-repeat: repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -8,10 +9,11 @@
   position: absolute;
 }
 .items{
-  background-color: transparent ;
+  background-color: #6c5373 ;
   color:black ;
   font-size: 20px;
   font-weight: bold;
+  text-align: center;
 }
 
 .bar-profile {
@@ -45,3 +47,12 @@
 {
   top: 169px;
 }
+ion-card-header{
+  text-align: center;
+ // background-color:#6c5373;
+
+}
+ion-card-content{
+ // background-color: #6c5373;
+}
+
