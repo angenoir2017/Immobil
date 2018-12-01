@@ -11,6 +11,7 @@ page-compte {
     white-space: nowrap;
     width: 100%;
     padding-top: 15px;
+    background-image:  url("../assets/imgs/wallg.jpg");
 
   }
   .fabC{
@@ -24,7 +25,8 @@ page-compte {
     margin-top: 10px !important;
     margin-bottom: 10px !important;
   }
-  .profile-picture {   border-radius:50%;
+  .profile-picture {
+    border-radius:50%;
     border: 100px;
   }
   .menu
@@ -34,6 +36,7 @@ page-compte {
   .bar-profile {
     background-color:white;
     height: 170px;
+
   }
   .items{
    text-align: right;
@@ -41,6 +44,27 @@ page-compte {
   .mon-container
   {
     background-image:  url("../assets/imgs/wallg.jpg");
-    background-repeat: repeat;
+   background-repeat: repeat;
+  }
+
+  button[ion-fab] {
+    overflow: visible;
+    position: relative;
+
+    ion-label {
+      position: absolute;
+      top: -8px;
+      right: 40px;
+
+      color: white;
+      background-color: rgba(0,0,0,0.7);
+      line-height: 24px;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+  }
+
+  .fab{
+    contain: layout;
   }
 }
