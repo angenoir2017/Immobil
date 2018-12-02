@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import {ComptePage} from "../pages/compte/compte";
 
 
 @Component({
@@ -25,9 +26,29 @@ export class MyApp {
       splashScreen.hide();
     });
   }
-  onPage(m){
+  Immobpage(){
     //  console.log("Ca marche le click");
-    this.rootPage= m.component;
+    this.rootPage='MesimmobPage';
+  }
+Homepage()
+  {
+    this.rootPage = 'HomePage';
+  }
+ Comptepage()
+  {
+    this.rootPage = 'ComptePage';
+  }
+  Partagerpage()
+  {
+    this.rootPage = 'HomePage';
+  }
+  Parametrepage()
+  {
+    this.rootPage = 'ParametrePage';
+  }
+  Aidepage()
+  {
+    this.rootPage = 'AidePage';
   }
 }
 

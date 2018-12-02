@@ -10,8 +10,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'detail.html',
 })
 export class DetailPage {
-
-  img = ['pub.jpg','logo.png','wall.jpg','reap.jpg'];
+  public buttonClicked: boolean = false; //Whatever you want to initialise it as
+  imgs = ['cll.jpg','cll.jpg','cll.jpg','cll.jpg'];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
     console.log(this.navParams);
@@ -23,6 +23,10 @@ export class DetailPage {
 
   louer(){
     this.navCtrl.push('PayementPage');
+  }
+  public onButtonClick() {
+
+    this.buttonClicked = !this.buttonClicked;
   }
 
 }

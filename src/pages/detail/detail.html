@@ -13,78 +13,84 @@
 </ion-header>
 
 
-<ion-content class="my-container" >
-  <ion-card style="background-color: #a8a8a8">
-    <ion-card-content>
-      <img src="/assets/imgs/pub.jpg">
-      <br>
-      <p>TOGO-LOME-TOKOIN</p>
-    </ion-card-content>
+<ion-content  class="my-container">
+  <div>
 
-  </ion-card>
-  <ion-card style="background-color: #a8a8a8">
-    <ion-card-content>
-      La phrase 2 identifie des services supplémentaires qui ne sont proposés qu’aux clients de la banque porteurs d’une carte de crédit de cette dernière. Il s’agit donc d’un profil différent du précédent, que nous matérialisons par un deuxième acteur, appelé client banque
-    </ion-card-content>
-  </ion-card>
-  <ion-card style="background-color: #3c3f41">
-    <ion-card-content class="buttonstyle">
-      <ion-grid style="text-align: center">
-        <ion-row>
-          <ion-col col-4 style="background-color: #cccccc">
-            img1
-          </ion-col>
-          <ion-col col-4 style="background-color: #cccccc">
-            img2
-          </ion-col>
-          <ion-col col-4 style="background-color: #cccccc">
-            img3
+<div style="text-align: center;left: 0%">
+<ion-card>
+  <!--ion-row>
+  <ion-col class="button-group">
+    <button ion-button round color="secondary" [ngClass]="{dark: travelDestinationA, light: travelDestinationB}">
+      <ion-icon name="md-card"></ion-icon>
+      Paiement
+    </button>
+    <button ion-button round color="secondary" [ngClass]="{dark: travelDestinationB, light: travelDestinationA}">
+      <ion-icon name="md-bookmark"></ion-icon>
+     Epingle
+    </button>
+  </ion-col>
+  </ion-row!-->
 
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-4 style="background-color: #cccccc">
-            img4
-          </ion-col>
-          <ion-col col-4 style="background-color: #cccccc">
-            img5
-          </ion-col>
-          <ion-col col-4 style="background-color: #cccccc">
-            img6
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-4 style="background-color: #cccccc">
-            img4
-          </ion-col>
-          <ion-col col-4 style="background-color: #cccccc">
-            img5
-          </ion-col>
-          <ion-col col-4 style="background-color: #cccccc">
-            img6
-          </ion-col>
-        </ion-row>
+  <ion-card-content>
+    <img  src="assets/imgs/pub.jpg" class="thumb-img" imageViewer />
 
-      </ion-grid>
-    </ion-card-content>
+  </ion-card-content>
+  <ion-card-title style="background-color: transparent">
+    <p> <label><ion-icon name="md-locate"> Togo lomé Tokoin </ion-icon></label></p>
+  </ion-card-title>
 
-  </ion-card>
-  <ion-card>
-    <ion-item>
-      <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/wyVM1evRxNw" frameborder="0" width="100%" height="315"></iframe>
-      </div>
-    </ion-item>
-  </ion-card>
-  <ion-grid style=" ; position: fixed; top: 80%">
-    <ion-row>
-      <ion-col col-6 style="text-align: center">
-        <ion-buttons ion-button style=" background-color:#18a15f" full large> ACHETER</ion-buttons>
-      </ion-col>
-      <ion-col col-6 style="text-align: center">
-        <ion-buttons ion-button  style=" background-color:#18a15f" full large> LOUER</ion-buttons>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+</ion-card>
+
+
+<ion-card style="background-color:transparent ">
+
+  <ion-card-title>
+    Gallery
+  </ion-card-title>
+  <ion-card-content>
+    <div style="height: 50%;width: 100%">
+      <ion-slides class="image-slider" loop="true" slidesPerView="2">
+        <ion-slide *ngFor="let img of imgs">
+          <img src="../../assets/imgs/{{img}}" class="thumb-img" imageViewer/>
+        </ion-slide>
+      </ion-slides>
+    </div>
+  </ion-card-content>
+</ion-card>
+</div>
+
+    <ion-card>
+      <ion-card-title style="text-align: center">
+        Vidéo
+      </ion-card-title>
+      <ion-item>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/wyVM1evRxNw" frameborder="0" width="100%" height="315" class="thumb-img"></iframe>
+        </div>
+      </ion-item>
+    </ion-card>
+</div>
+
+  <ion-fab bottom right >
+    <button ion-fab ><ion-icon name="md-add"></ion-icon></button>
+    <ion-fab-list side="top">
+
+      <button ion-fab>
+        <ion-icon name="md-help"></ion-icon>
+        <ion-label>Aide</ion-label>
+      </button>
+      <button ion-fab>
+        <ion-icon name="md-bookmark"></ion-icon>
+        <ion-label>Vos Epingle</ion-label>
+      </button>
+      <button ion-fab>
+        <ion-icon name="md-add"></ion-icon>
+        <ion-label>Ajouter immobilier</ion-label>
+      </button>
+    </ion-fab-list>
+
+  </ion-fab>
+
+
 </ion-content>
 
