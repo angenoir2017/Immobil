@@ -15,6 +15,7 @@ export class HomePage {
    operation:any;
    isSearchbarOpened = false;
    //
+  public couleur :any;
   public objaVendres :any=['Maison','Appartement','Terrain'];
 
   public objaLouers :any=['Maison','Appartement','Magazin'];
@@ -68,6 +69,7 @@ export class HomePage {
       if(select=="acheter"){
         this.getAvendre();
         this.articles = this.aVendre;
+
       } else {
         this.getAlouer();
         this.articles = this.aLouer;
@@ -75,7 +77,7 @@ export class HomePage {
     }
 //Partie de manipulation de donnee
   //Ici nous obtenons les objets a afficher via l'api
-getAlouer(){
+    getAlouer(){
     this.articleProvider.getAlouer().subscribe(data=>{
       this.aLouer = data;
     },err =>{

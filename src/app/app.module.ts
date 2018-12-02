@@ -9,7 +9,8 @@ import {HttpClientModule} from "@angular/common/http";
 import {IonicStorageModule} from "@ionic/storage";
 import { ArticlesProvider } from '../providers/articles/articles';
 import { Stripe } from '@ionic-native/stripe';
-import { IonicImageViewerModule } from 'ionic-img-viewer';
+//import { IonicImageViewerModule } from 'ionic-img-viewer';
+import {AuthProvider} from "../providers/auth/auth";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { IonicImageViewerModule } from 'ionic-img-viewer';
     HttpClientModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
-    IonicImageViewerModule
+    //IonicImageViewerModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -34,7 +35,8 @@ import { IonicImageViewerModule } from 'ionic-img-viewer';
     SplashScreen,
     Stripe,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ArticlesProvider
+    ArticlesProvider,
+    AuthProvider
   ]
 })
 export class AppModule {}

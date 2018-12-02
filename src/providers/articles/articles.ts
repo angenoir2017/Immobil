@@ -20,13 +20,14 @@ export class ArticlesProvider {
   data: Observable<any>;
 
 
-  constructor(public http: HttpClient,
+  constructor(
+              public http: HttpClient,
               public storage:Storage
                       ){
     console.log('Hello ArticlesProvider Provider');
 
-    this.urlAlouer = 'http://192.168.43.8:3000/api/alouers';
-    this.urlAvendre = 'http://192.168.43.8:3000/api/avendres';
+    this.urlAlouer = 'http://localhost:3000/api/alouers';
+    this.urlAvendre = 'http://localhost:3000/api/avendres';
   }
 
   //Partie de manipulation de donnee

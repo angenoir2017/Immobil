@@ -8,22 +8,36 @@ page-home {
     height: 100%;
     position: absolute;
   }
-  .lellike{
-    color: #419fd9;
-    background-color: #fff;
-
+  .lePartage{
+    background:transparent;
+    width: 2em;
+    height: 2em;
+    border-radius: 15px;
+    color: #1565C0;
+    margin-left: 120px;
   }
-  ion-header{
+  .lelike{
 
-
+    background:transparent;
+    width: 2em;
+    height: 2em;
+    border-radius: 15px;
+    color: #EF5350;
   }
-  ion-title{
 
+  .lecard{
+   margin: 8px;
+   // background: linear-gradient(90deg, rgba(255,255,255,0.42068165156687676) 0%, rgba(242,248,241,0.5635387944240196) 59%, rgba(2,3,25,0.44309061515231096) 100%);     font-size: 0.20em;
+    background: linear-gradient(176deg, rgba(64,71,70,0.48790854232317926) 0%, rgba(254,254,254,0.485107421875) 54%, rgba(255,255,255,0.49631190366771705) 100%);     // height: 50em;
+
+    -moz-border-radius: 30px 15px / 15px 30px;
+    border-radius: 30px 15px / 15px 30px;
+
+    // background: transparent;
   }
 
-  ion-segment-button{
-    //max-width: 25px;
-  }
+
+
   .mybuton{
     .segment-button {
       border-style: none;

@@ -63,33 +63,26 @@
     </ion-row>
 </div>
 </div>
-  <ion-card *ngFor="let article of articles" >
-    <ion-card-header (click)="voirDetail()">
-      <img [src]="article.urlPhoto"/>
 
+  <ion-card *ngFor="let article of articles" class="lecard">
+    <ion-card-header >
+      <button ion-button icon-only class="lelike" >
+        <ion-icon name="heart"></ion-icon></button>
+      <button ion-button icon-only class="lePartage">
+        <ion-icon name="share"></ion-icon></button>
+      <img [src]="article.urlPhoto"/>
     </ion-card-header>
 
 
-    <ion-card-content>
-      <button ion-button icon-only class="lellike">
-        <ion-icon name="heart"></ion-icon></button>
-      <button ion-button icon-only class="lellike">
-        <ion-icon name="share"></ion-icon></button>
+    <ion-card-content (click)="voirDetail()">
       <ion-card-title>
-        {{article.name}}
-        <ion-item>
         Prix: {{article.price}}
-      </ion-item>
-        <ion-item>
-          Proprietaire: {{article.proprio}}
-        </ion-item>
+
       </ion-card-title>
-      {{article.type}}
+      <p>Proprietaire: {{article.proprio}}</p>
+      <p>{{article.type}} </p>
       <p>
-        <ion-icon name="heart" item-start></ion-icon>
-       31
-     /
-        <ion-icon name="eye" item-start></ion-icon>
+               <ion-icon name="eye" item-start></ion-icon>
         43
       </p>
 

@@ -8,7 +8,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = 'HomePage';
+  rootPage:any = 'InscriptionPage';
   menus =[
     {title:'Soumèttre Immobilier', icon: 'add', component:'MesimmobPage'},
     {title:'Acceuil', icon: 'home', component: 'HomePage'},
@@ -16,6 +16,7 @@ export class MyApp {
     {title:'Partager', icon: 'share', component: 'ComptePage'},
     {title:'Parametre', icon: 'settings', component: 'ParametrePage'},
     {title: 'Aide et commentaires',icon:'help', component:'AidePage'}
+   // ,{title: 'Inscription',icon:'help', component:'InscriptionPage'}
   ];
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
