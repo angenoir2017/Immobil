@@ -10,8 +10,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'detail.html',
 })
 export class DetailPage {
-
-  img = ['pub.jpg','logo.png','wall.jpg','reap.jpg'];
+  public buttonlouer: boolean ; //Whatever you want to initialise it as
+  public buttonacheter: boolean ;
+  imgs = ['cll.jpg','cll.jpg','cll.jpg','cll.jpg'];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
     console.log(this.navParams);
@@ -19,6 +20,8 @@ export class DetailPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetailPage');
+    this.buttonlouer= this.navParams.get('param1');
+    this.buttonacheter= this.navParams.get('param2');
   }
 
   louer(){
