@@ -22,8 +22,8 @@ export class HomePage {
   public articles: any =[];
   public aLouer: any =[];
   public aVendre: any =[];
-  segmentSelected : any;
-
+  buttonacheter :boolean = false;
+buttonlouer:boolean = false;
 
     constructor(public navCtrl: NavController,
               public http: HttpClient,
@@ -92,9 +92,23 @@ getAlouer(){
 
   //Si l'utilisateur click il es dirige vers la page detail
   //avec envoie de l'item clicke
-  voirDetail(){
+  voirDetail(select){
+if (select =='acheter')
+{ this.buttonacheter = true;
+  this.navCtrl.push('DetailPage', {
+    param1: this.buttonlouer,
+    param2: this.buttonacheter
 
-    this.navCtrl.push('DetailPage');
+  });}else{
+  this.buttonlouer = true;
+  this.navCtrl.push('DetailPage', {
+    param1: this.buttonlouer,
+    param2: this.buttonacheter
+
+  });
+
+}
+
 
   }
 

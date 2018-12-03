@@ -3,6 +3,7 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {ComptePage} from "../pages/compte/compte";
+import {AddArticlePage} from "../pages/add-article/add-article";
 
 
 @Component({
@@ -28,7 +29,7 @@ export class MyApp {
   }
   Immobpage(){
     //  console.log("Ca marche le click");
-    this.rootPage='MesimmobPage';
+    this.rootPage='AddArticlePage';
   }
 Homepage()
   {

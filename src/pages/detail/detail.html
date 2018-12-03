@@ -17,7 +17,7 @@
   <div>
 
 <div style="text-align: center;left: 0%">
-<ion-card>
+<ion-card style="background-color:transparent ">
   <!--ion-row>
   <ion-col class="button-group">
     <button ion-button round color="secondary" [ngClass]="{dark: travelDestinationA, light: travelDestinationB}">
@@ -38,7 +38,8 @@
   <ion-card-title style="background-color: transparent">
     <p> <label><ion-icon name="md-locate"> Togo lomé Tokoin </ion-icon></label></p>
   </ion-card-title>
-
+  <button *ngIf="buttonacheter" ion-button full > Acheter</button>
+  <button *ngIf="buttonlouer" ion-button full > Louer</button>
 </ion-card>
 
 
@@ -59,15 +60,15 @@
 </ion-card>
 </div>
 
-    <ion-card>
+    <ion-card style="background-color:transparent ">
       <ion-card-title style="text-align: center">
         Vidéo
       </ion-card-title>
-      <ion-item>
+
         <div class="video-container">
           <iframe src="https://www.youtube.com/embed/wyVM1evRxNw" frameborder="0" width="100%" height="315" class="thumb-img"></iframe>
         </div>
-      </ion-item>
+
     </ion-card>
 </div>
 
